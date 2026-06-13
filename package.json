@@ -1,0 +1,14 @@
+{
+  "name": "procesadora-monegro-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pagina brochure corporativa de Procesadora Monegro MC.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5174",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4174"
+  },
+  "devDependencies": {
+    "vite": "^8.0.16"
+  }
+}
