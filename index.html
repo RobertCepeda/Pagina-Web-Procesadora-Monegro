@@ -12,13 +12,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="/assets/procesadora-monegro.png" />
-    <link rel="apple-touch-icon" href="/assets/procesadora-monegro.png" />
+    <link rel="icon" type="image/png" href="./assets/procesadora-monegro.png" />
+    <link rel="apple-touch-icon" href="./assets/procesadora-monegro.png" />
     <meta property="og:title" content="Procesadora Monegro MC" />
     <meta property="og:description" content="Procesamos calidad, servimos confianza. Productos frescos porcionados para operaciones B2B." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://procesadoramonegro.com" />
-    <meta property="og:image" content="/assets/hero-productos-reales.png" />
+    <meta property="og:image" content="./assets/hero-operacion-monegro.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Procesadora Monegro MC" />
     <meta name="twitter:description" content="Productos frescos porcionados con calidad, higiene y confianza." />
@@ -36,13 +36,13 @@
         }
       }
     </script>
-    <script type="module" src="/src/main.js"></script>
-    <link rel="stylesheet" href="/src/styles.css" />
+    <script type="module" src="./src/main.js"></script>
+    <link rel="stylesheet" href="./src/styles.css" />
   </head>
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="#inicio" aria-label="Procesadora Monegro MC">
-        <img src="/assets/procesadora-monegro.png" alt="Procesadora Monegro" />
+        <span>Procesadora Monegro MC</span>
       </a>
       <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false" data-menu-button>
         <span></span>
@@ -51,11 +51,11 @@
       </button>
       <nav class="main-nav" data-nav>
         <a href="#somos">Quienes somos</a>
-        <a href="#hacemos">Que hacemos</a>
+        <a href="#proceso">Proceso</a>
         <a href="#productos">Productos</a>
+        <a href="#calidad">Calidad</a>
         <a href="#galeria">Galeria</a>
         <a href="#confianza">Confianza</a>
-        <a href="#valores">Valores</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
@@ -64,18 +64,42 @@
       <section id="inicio" class="hero" aria-label="Inicio">
         <div class="hero-media" role="img" aria-label="Productos frescos en un ambiente de produccion limpio"></div>
         <div class="hero-shade"></div>
-        <div class="hero-brand-mark" aria-hidden="true">
-          <img src="/assets/procesadora-monegro.png" alt="" />
-          <span>Productos frescos porcionados</span>
-        </div>
         <div class="hero-content">
           <p class="eyebrow">Est. 2019 | Procesadora Monegro MC</p>
           <h1>Procesamos calidad, servimos confianza.</h1>
-          <p class="hero-copy">Elaboramos y coordinamos productos frescos con procesos responsables, control operativo y compromiso diario con cada punto de servicio.</p>
+          <p class="hero-copy">Productos frescos porcionados, preparados y coordinados para operaciones que necesitan higiene, consistencia y abastecimiento diario.</p>
           <div class="hero-actions">
             <a class="button primary" href="#productos">Ver productos</a>
             <a class="button light" href="#contacto">Contactar</a>
           </div>
+          <div class="hero-metrics" aria-label="Indicadores principales">
+            <span><strong>81</strong> productos operativos</span>
+            <span><strong>2019</strong> trayectoria</span>
+            <span><strong>B2B</strong> servicio corporativo</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="operation-band" aria-label="Resumen operativo">
+        <div>
+          <span>01</span>
+          <strong>Seleccion</strong>
+          <p>Materia prima revisada para producir con frescura y consistencia.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <strong>Preparacion</strong>
+          <p>Cortes, porcionado y mezclas listos para el ritmo de cada punto.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <strong>Empaque</strong>
+          <p>Presentacion limpia, ordenada y pensada para servicio diario.</p>
+        </div>
+        <div>
+          <span>04</span>
+          <strong>Entrega</strong>
+          <p>Coordinacion responsable para mantener continuidad operativa.</p>
         </div>
       </section>
 
@@ -84,9 +108,15 @@
           <p class="eyebrow">Quienes somos</p>
           <h2>Una empresa hecha para producir con orden, frescura y responsabilidad.</h2>
         </div>
-        <div class="intro-grid">
-          <p>Procesadora Monegro MC nace con la vision de servir productos consistentes y confiables, cuidando cada etapa desde la preparacion hasta la entrega. Nuestro trabajo combina disciplina operativa, supervision cercana y vocacion de servicio.</p>
-          <p>Creemos que la calidad no se improvisa: se organiza, se mide y se mejora todos los dias. Por eso trabajamos con enfoque en higiene, trazabilidad, puntualidad y atencion a las necesidades de nuestras sucursales y clientes.</p>
+        <div class="intro-layout">
+          <div class="intro-grid">
+            <p>Procesadora Monegro MC nace con la vision de servir productos consistentes y confiables, cuidando cada etapa desde la preparacion hasta la entrega. Nuestro trabajo combina disciplina operativa, supervision cercana y vocacion de servicio.</p>
+            <p>Creemos que la calidad no se improvisa: se organiza, se mide y se mejora todos los dias. Por eso trabajamos con enfoque en higiene, trazabilidad, puntualidad y atencion a las necesidades de nuestras sucursales y clientes.</p>
+          </div>
+          <aside class="intro-visual" aria-label="Identidad Procesadora Monegro">
+            <img src="./assets/procesadora-monegro.png" alt="Procesadora Monegro" />
+            <span>Frescura, orden y servicio diario</span>
+          </aside>
         </div>
         <div class="stats-strip" aria-label="Indicadores de la empresa">
           <div>
@@ -104,12 +134,32 @@
         </div>
       </section>
 
-      <section id="hacemos" class="section muted-section">
+      <section id="proceso" class="section process-section">
         <div class="section-heading narrow">
           <p class="eyebrow">Que hacemos</p>
-          <h2>Unimos produccion, control y distribucion para que cada entrega llegue como debe.</h2>
+          <h2>Convertimos productos frescos en soluciones listas para operar.</h2>
         </div>
-        <div class="service-grid">
+        <div class="process-layout">
+          <div class="process-media" role="img" aria-label="Mesa de produccion con productos frescos y personal uniformado"></div>
+          <div class="process-list">
+            <article>
+              <span>Seleccion</span>
+              <h3>Materia prima revisada</h3>
+              <p>Frutas, vegetales, viveres y preparados se organizan segun necesidad operativa.</p>
+            </article>
+            <article>
+              <span>Corte y porcionado</span>
+              <h3>Consistencia para cada servicio</h3>
+              <p>Trabajamos presentaciones que reducen tiempo de preparacion y ayudan a mantener estandares.</p>
+            </article>
+            <article>
+              <span>Control diario</span>
+              <h3>Orden antes de entregar</h3>
+              <p>Supervision de cantidades, higiene, empaque y disponibilidad por punto de servicio.</p>
+            </article>
+          </div>
+        </div>
+        <div class="service-grid compact-services">
           <article class="service-card">
             <span class="service-mark">01</span>
             <h3>Produccion diaria</h3>
@@ -131,7 +181,11 @@
       <section id="productos" class="section products-section">
         <div class="section-heading">
           <p class="eyebrow">Nuestros productos</p>
-          <h2>Productos pensados para el ritmo diario de nuestras sucursales y clientes.</h2>
+          <h2>Un catalogo operativo para cocinas, sucursales y servicios que no pueden detenerse.</h2>
+        </div>
+        <div class="product-summary">
+          <strong>81 productos</strong>
+          <p>Frutas, vegetales, viveres, raices, sazones, mezclas y preparados frescos para acelerar la operacion sin sacrificar calidad.</p>
         </div>
         <div class="product-grid">
           <article class="product-card feature-product">
@@ -159,10 +213,25 @@
         </div>
       </section>
 
+      <section id="calidad" class="quality-lab-section">
+        <div class="quality-lab-media" role="img" aria-label="Logo de Procesadora Monegro en area de produccion"></div>
+        <div class="quality-lab-copy">
+          <p class="eyebrow">Calidad en cada etapa</p>
+          <h2>La confianza se construye antes de cada entrega.</h2>
+          <p>Controlamos seleccion, limpieza, corte, empaque y despacho para que cada producto represente el nombre de Procesadora Monegro MC con frescura y responsabilidad.</p>
+          <div class="quality-pill-grid">
+            <span>Higiene</span>
+            <span>Trazabilidad</span>
+            <span>Consistencia</span>
+            <span>Puntualidad</span>
+          </div>
+        </div>
+      </section>
+
       <section id="galeria" class="section gallery-section">
         <div class="section-heading">
           <p class="eyebrow">Galeria operativa</p>
-          <h2>Una mirada visual al tipo de productos y procesos que cuidamos cada dia.</h2>
+          <h2>Productos frescos, preparacion limpia y una identidad visible en la operacion.</h2>
         </div>
         <div class="gallery-grid" aria-label="Galeria de productos y procesos">
           <article class="gallery-card gallery-card--fruit">
@@ -335,7 +404,7 @@
     </main>
 
     <footer class="site-footer">
-      <img src="/assets/procesadora-monegro.png" alt="Procesadora Monegro" />
+      <img src="./assets/procesadora-monegro.png" alt="Procesadora Monegro" />
       <p>Procesadora Monegro MC. Procesamos calidad, servimos confianza.</p>
       <span>Copyright 2026 Procesadora Monegro MC</span>
     </footer>

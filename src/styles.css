@@ -69,8 +69,14 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
-  width: 164px;
-  min-width: 140px;
+  width: auto;
+  min-width: 0;
+  color: inherit;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .brand img {
@@ -150,7 +156,7 @@ img {
 .hero-media {
   position: absolute;
   inset: 0;
-  background-image: url("/assets/hero-productos-reales.png");
+  background-image: url("../assets/hero-operacion-monegro.png");
   background-position: center;
   background-size: cover;
   transform: scale(1.02);
@@ -164,34 +170,6 @@ img {
     linear-gradient(90deg, rgba(9, 39, 22, .88) 0%, rgba(9, 39, 22, .7) 39%, rgba(9, 39, 22, .28) 72%, rgba(9, 39, 22, .2) 100%),
     linear-gradient(180deg, rgba(4, 21, 12, .32), rgba(4, 21, 12, .52));
   z-index: -1;
-}
-
-.hero-brand-mark {
-  position: absolute;
-  top: 128px;
-  right: clamp(20px, 5vw, 72px);
-  z-index: 1;
-  width: 188px;
-  padding: 12px;
-  border: 1px solid rgba(15, 63, 36, .14);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, .94);
-  box-shadow: 0 18px 42px rgba(15, 63, 36, .16);
-  backdrop-filter: blur(10px);
-}
-
-.hero-brand-mark img {
-  width: 100%;
-}
-
-.hero-brand-mark span {
-  display: block;
-  margin-top: 8px;
-  color: var(--green-900);
-  font-size: 12px;
-  font-weight: 900;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .hero-content {
@@ -400,7 +378,7 @@ img {
   color: var(--white);
   background:
     linear-gradient(180deg, rgba(8, 50, 27, .04), rgba(8, 50, 27, .78)),
-    url("/assets/hero-productos-reales.png") center / cover;
+    url("../assets/hero-operacion-monegro.png") center / cover;
   border-color: transparent;
 }
 
@@ -842,9 +820,6 @@ img {
     min-height: 340px;
   }
 
-  .hero-brand-mark {
-    display: none;
-  }
 }
 
 @media (max-width: 640px) {
@@ -853,7 +828,8 @@ img {
   }
 
   .brand {
-    width: 134px;
+    max-width: 190px;
+    font-size: 11px;
   }
 
   .hero {
@@ -925,5 +901,449 @@ img {
     transition-duration: .01ms !important;
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* Modern brand refresh */
+.hero {
+  min-height: 92svh;
+  align-items: flex-end;
+  padding-bottom: clamp(58px, 8vh, 92px);
+}
+
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(5, 28, 15, .94) 0%, rgba(8, 42, 23, .82) 36%, rgba(8, 42, 23, .4) 64%, rgba(8, 42, 23, .12) 100%),
+    linear-gradient(180deg, rgba(4, 21, 12, .18) 0%, rgba(4, 21, 12, .28) 43%, rgba(4, 21, 12, .74) 100%);
+}
+
+.hero-content {
+  width: min(780px, 100%);
+}
+
+.hero h1 {
+  max-width: 820px;
+  text-wrap: balance;
+}
+
+.hero-copy {
+  max-width: 680px;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  width: min(720px, 100%);
+  margin-top: 28px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  background: rgba(255, 255, 255, .16);
+  backdrop-filter: blur(14px);
+}
+
+.hero-metrics span {
+  display: grid;
+  gap: 5px;
+  min-height: 86px;
+  padding: 18px;
+  color: rgba(255, 255, 255, .82);
+  font-size: 13px;
+  font-weight: 800;
+  background: rgba(7, 34, 18, .34);
+}
+
+.hero-metrics strong {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1;
+}
+
+.operation-band {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  padding: 0 clamp(20px, 6vw, 88px);
+  background: var(--green-900);
+}
+
+.operation-band div {
+  min-height: 170px;
+  padding: 28px;
+  color: var(--white);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .03)),
+    var(--green-900);
+}
+
+.operation-band span {
+  display: inline-flex;
+  margin-bottom: 28px;
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.operation-band strong {
+  display: block;
+  font-size: 21px;
+}
+
+.operation-band p {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, .72);
+  line-height: 1.55;
+}
+
+.intro-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  gap: 42px;
+  align-items: stretch;
+}
+
+.intro-layout .intro-grid {
+  margin-left: 0;
+}
+
+.intro-visual {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  min-height: 260px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 30px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, .92), rgba(243, 248, 245, .9)),
+    linear-gradient(135deg, var(--green-900), var(--green-700));
+  box-shadow: var(--shadow);
+}
+
+.intro-visual img {
+  width: min(280px, 86%);
+}
+
+.intro-visual span {
+  margin-top: 18px;
+  color: var(--green-900);
+  font-weight: 900;
+  text-align: center;
+}
+
+.process-section {
+  background:
+    linear-gradient(180deg, #f7fbf8 0%, #ffffff 100%);
+}
+
+.process-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr);
+  gap: 26px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.process-media,
+.quality-lab-media {
+  min-height: 520px;
+  border-radius: 8px;
+  background-image:
+    linear-gradient(180deg, rgba(11, 63, 36, .03), rgba(11, 63, 36, .4)),
+    url("../assets/hero-operacion-monegro.png");
+  background-size: cover;
+  box-shadow: var(--shadow);
+}
+
+.process-media {
+  background-position: center;
+}
+
+.process-list {
+  display: grid;
+  gap: 12px;
+}
+
+.process-list article {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 26px;
+  background: var(--white);
+  box-shadow: 0 12px 30px rgba(16, 32, 22, .05);
+}
+
+.process-list article::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 4px;
+  height: 46px;
+  background: var(--green-700);
+}
+
+.process-list span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.process-list h3 {
+  margin: 0 0 10px;
+  color: var(--green-900);
+  font-size: 26px;
+}
+
+.process-list p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.compact-services {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.product-summary {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  margin: -18px 0 32px auto;
+  max-width: 980px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px 26px;
+  background: var(--white);
+  box-shadow: 0 16px 40px rgba(16, 32, 22, .06);
+}
+
+.product-summary strong {
+  color: var(--green-700);
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 62px);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.product-summary p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.product-card {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 48px rgba(16, 32, 22, .1);
+}
+
+.feature-product {
+  background:
+    linear-gradient(180deg, rgba(8, 50, 27, .04), rgba(8, 50, 27, .86)),
+    url("../assets/hero-operacion-monegro.png") 38% 74% / 210% auto;
+}
+
+.quality-lab-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, .72fr);
+  gap: 34px;
+  align-items: stretch;
+  padding: 88px clamp(20px, 6vw, 88px);
+  background: var(--green-900);
+}
+
+.quality-lab-media {
+  background-position: left top;
+}
+
+.quality-lab-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 8px;
+  padding: clamp(26px, 5vw, 48px);
+  color: var(--white);
+  background: rgba(255, 255, 255, .06);
+}
+
+.quality-lab-copy h2 {
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.5vw, 60px);
+  line-height: 1.02;
+}
+
+.quality-lab-copy p {
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, .78);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.quality-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.quality-pill-grid span {
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-weight: 900;
+  background: rgba(255, 255, 255, .08);
+}
+
+.gallery-card {
+  isolation: isolate;
+  background-image:
+    linear-gradient(180deg, rgba(5, 28, 15, .08), rgba(5, 28, 15, .78)),
+    url("../assets/hero-operacion-monegro.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-card::before {
+  display: none;
+}
+
+.gallery-card::after {
+  right: 18px;
+  top: 18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .16);
+  border: 1px solid rgba(255, 255, 255, .22);
+}
+
+.gallery-card--fruit {
+  background-position: 18% 82%;
+}
+
+.gallery-card--veg {
+  background-position: 46% 70%;
+}
+
+.gallery-card--roots {
+  background-position: 76% 78%;
+}
+
+.gallery-card--mix {
+  background-position: 58% 88%;
+}
+
+.gallery-card--quality {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(15, 63, 36, .86)),
+    url("../assets/hero-operacion-monegro.png");
+  background-position: 12% 18%;
+  color: var(--white);
+}
+
+.gallery-card--quality p {
+  color: rgba(255, 255, 255, .82);
+}
+
+.gallery-card--supply {
+  background-position: 92% 42%;
+}
+
+.quality-section {
+  background:
+    linear-gradient(90deg, rgba(15, 63, 36, .98), rgba(15, 63, 36, .86)),
+    url("../assets/hero-operacion-monegro.png") center / cover;
+}
+
+.testimonial-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .04));
+}
+
+@media (max-width: 980px) {
+  .operation-band,
+  .intro-layout,
+  .process-layout,
+  .quality-lab-section {
+    grid-template-columns: 1fr;
+  }
+
+  .operation-band {
+    padding: 0;
+  }
+
+  .process-media,
+  .quality-lab-media {
+    min-height: 420px;
+  }
+
+  .compact-services {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 30px;
+  }
+
+  .hero-media {
+    background-position: 40% center;
+  }
+
+  .hero-metrics,
+  .product-summary,
+  .quality-pill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 22px;
+  }
+
+  .hero-metrics span {
+    min-height: 74px;
+    padding: 12px 10px;
+    font-size: 11px;
+  }
+
+  .hero-metrics strong {
+    font-size: 28px;
+  }
+
+  .operation-band div {
+    min-height: auto;
+    padding: 22px 20px;
+  }
+
+  .intro-layout,
+  .process-layout {
+    gap: 22px;
+  }
+
+  .process-media,
+  .quality-lab-media {
+    min-height: 320px;
+  }
+
+  .product-summary strong {
+    white-space: normal;
   }
 }
